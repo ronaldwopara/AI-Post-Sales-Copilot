@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Post-sales Copilot Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-node {
+            border: 2px solid #006EE6;
+            background-color: #E6F0FA;
+            color: #004AAD;
+        }
+        .flowchart-arrow {
+            color: #006EE6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" style="background-color: #E6F0FA;">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-black" style="color: #004AAD;">AI Post-sales Copilot</h1>
+            <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto" style="color: #006EE6;">Automating Revenue Operations & Unlocking Actionable Contract Insights</p>
+        </header>
+
+        <section id="challenge" class="my-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold" style="color: #004AAD;">The Post-Sales Operations Challenge</h2>
+                <p class="mt-2 text-md max-w-2xl mx-auto" style="color: #004AAD;">Manual processes create data silos, introduce errors, and slow down critical decision-making. This inefficiency directly impacts revenue and customer retention.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl font-extrabold" style="color: #006EE6;">30%</div>
+                    <p class="mt-2 font-semibold text-lg" style="color: #004AAD;">Manual Data Entry</p>
+                    <p class="text-sm" style="color: #004AAD;">Time wasted on repetitive tasks that could be automated.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl font-extrabold" style="color: #006EE6;">~25%</div>
+                    <p class="mt-2 font-semibold text-lg" style="color: #004AAD;">Slower Decision-Making</p>
+                    <p class="text-sm" style="color: #004AAD;">Delayed insights due to fragmented and inaccurate data.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl font-extrabold" style="color: #006EE6;">40%</div>
+                    <p class="mt-2 font-semibold text-lg" style="color: #004AAD;">Data Sync Lag</p>
+                    <p class="text-sm" style="color: #004AAD;">Time lost waiting for CRM systems to align.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="my-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold" style="color: #004AAD;">How It Works: A Unified Data Flow</h2>
+                <p class="mt-2 text-md max-w-2xl mx-auto" style="color: #004AAD;">Our AI Copilot integrates seamlessly into your workflow, transforming scattered data and complex documents into a single source of truth.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg overflow-x-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="flowchart-node p-4 rounded-lg text-center w-32 h-20 flex items-center justify-center">Salesforce</div>
+                        <div class="flowchart-node p-4 rounded-lg text-center w-32 h-20 flex items-center justify-center">HubSpot</div>
+                    </div>
+                    <div class="text-4xl font-light flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-node p-4 rounded-lg text-center w-48 h-24 flex flex-col items-center justify-center">
+                        <span class="font-bold">Data Pipeline</span>
+                        <span class="text-xs">(Python + Pandas)</span>
+                    </div>
+                    <div class="text-4xl font-light flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-node p-4 rounded-lg text-center w-48 h-24 flex flex-col items-center justify-center">
+                        <span class="font-bold">Unified Database</span>
+                        <span class="text-xs">(PostgreSQL)</span>
+                    </div>
+                    <div class="text-4xl font-light flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-node p-4 rounded-lg text-center w-48 h-24 flex flex-col items-center justify-center">
+                        <span class="font-bold">AI/NLP Engine</span>
+                        <span class="text-xs">(spaCy/Transformers)</span>
+                    </div>
+                    <div class="text-4xl font-light flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                     <div class="flowchart-node p-4 rounded-lg text-center w-48 h-24 flex flex-col items-center justify-center">
+                        <span class="font-bold">API Backend</span>
+                        <span class="text-xs">(FastAPI)</span>
+                    </div>
+                    <div class="text-4xl font-light flowchart-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="flowchart-node p-4 rounded-lg text-center w-48 h-24 flex items-center justify-center font-bold">React Dashboard</div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="impact" class="my-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold" style="color: #004AAD;">Measurable Impact & Performance</h2>
+                 <p class="mt-2 text-md max-w-2xl mx-auto" style="color: #004AAD;">The AI Copilot delivers significant, quantifiable improvements across key areas of post-sales operations, driving efficiency and accuracy.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Operational Efficiency Gains</h3>
+                    <p class="text-sm text-center mb-4" style="color: #004AAD;">Direct comparison of time and effort spent on key operational tasks before and after implementing the AI Copilot.</p>
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="efficiencyChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Data Accuracy & NLP Precision</h3>
+                     <p class="text-sm text-center mb-4" style="color: #004AAD;">The system achieves high accuracy in both unifying customer data from multiple sources and extracting critical terms from legal contracts.</p>
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="accuracyChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg lg:col-span-2">
+                     <h3 class="text-xl font-bold text-center mb-4" style="color: #004AAD;">Holistic Performance Enhancement</h3>
+                    <p class="text-sm text-center mb-4" style="color: #004AAD;">A comprehensive view of the AI Copilot's impact across five critical performance vectors, showcasing balanced and powerful improvements.</p>
+                    <div class="chart-container h-96">
+                        <canvas id="performanceRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 bg-white p-6 rounded-lg shadow-lg text-center">
+                <p class="text-lg font-semibold" style="color: #004AAD;">Real-Time Insight Delivery</p>
+                <div class="text-6xl font-black my-2" style="color: #006EE6;">&lt;300ms</div>
+                <p class="text-md" style="color: #004AAD;">Average API response time, ensuring the React dashboard is always populated with the latest contract and revenue updates instantly.</p>
+            </div>
+        </section>
+        
+        <section id="stack" class="my-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold" style="color: #004AAD;">Core Technology Stack</h2>
+                <p class="mt-2 text-md max-w-2xl mx-auto" style="color: #004AAD;">Built with a modern, scalable, and powerful set of technologies designed for performance and reliability.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center" style="color: #004AAD;">Frontend</h3>
+                    <ul class="mt-4 space-y-2 text-center" style="color: #006EE6;">
+                        <li><span class="font-semibold">React:</span> For building a dynamic user interface.</li>
+                        <li><span class="font-semibold">Tailwind CSS:</span> For rapid, responsive styling.</li>
+                        <li><span class="font-semibold">Recharts:</span> For interactive and clear data visualizations.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center" style="color: #004AAD;">Backend & AI</h3>
+                     <ul class="mt-4 space-y-2 text-center" style="color: #006EE6;">
+                        <li><span class="font-semibold">FastAPI:</span> For high-performance API services.</li>
+                        <li><span class="font-semibold">spaCy / Transformers:</span> For advanced NLP and contract parsing.</li>
+                        <li><span class="font-semibold">NumPy & Pandas:</span> For efficient data manipulation.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-center" style="color: #004AAD;">Data & Infrastructure</h3>
+                    <ul class="mt-4 space-y-2 text-center" style="color: #006EE6;">
+                        <li><span class="font-semibold">PostgreSQL:</span> For robust and reliable data storage.</li>
+                        <li><span class="font-semibold">SQLAlchemy:</span> For powerful ORM capabilities.</li>
+                        <li><span class="font-semibold">Salesforce & HubSpot APIs:</span> For seamless CRM integration.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const palette = {
+                deepBlue: '#004AAD',
+                brightBlue: '#006EE6',
+                lightBlue: '#80B9F2',
+                veryLightBlue: '#E6F0FA',
+                fontColor: '#004AAD'
+            };
+
+            function wrapLabel(label, maxWidth = 16) {
+                if (typeof label !== 'string' || label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            }
+
+            const universalTooltipCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: palette.fontColor
+                        }
+                    }
+                },
+                 scales: {
+                    y: {
+                        ticks: { color: palette.fontColor },
+                        grid: { color: 'rgba(0, 74, 173, 0.1)' }
+                    },
+                    x: {
+                        ticks: { color: palette.fontColor },
+                        grid: { color: 'rgba(0, 74, 173, 0.1)' }
+                    }
+                }
+            };
+            
+            const universalRadarCallback = {
+                 plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: palette.fontColor
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 74, 173, 0.2)' },
+                        grid: { color: 'rgba(0, 74, 173, 0.2)' },
+                        pointLabels: {
+                            color: palette.fontColor,
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            color: palette.fontColor,
+                            backdropColor: 'rgba(230, 240, 250, 0.6)'
+                        }
+                    }
+                }
+            };
+
+            const efficiencyLabels = ['Manual Data Entry Reduction', 'Data Sync Time Reduction'].map(l => wrapLabel(l));
+            const efficiencyChartCtx = document.getElementById('efficiencyChart');
+            if(efficiencyChartCtx) {
+                new Chart(efficiencyChartCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: efficiencyLabels,
+                        datasets: [{
+                            label: 'Before AI Copilot',
+                            data: [100, 100],
+                            backgroundColor: palette.lightBlue,
+                            borderColor: palette.lightBlue,
+                            borderWidth: 1
+                        }, {
+                            label: 'After AI Copilot',
+                            data: [100 - 30, 100 - 40],
+                            backgroundColor: palette.deepBlue,
+                            borderColor: palette.deepBlue,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: { ...universalTooltipCallback, maintainAspectRatio: false, indexAxis: 'y' }
+                });
+            }
+
+            const accuracyChartCtx = document.getElementById('accuracyChart');
+            if(accuracyChartCtx) {
+                new Chart(accuracyChartCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Improved Data Accuracy', 'Margin for Error/Complexity', 'NLP Extraction Accuracy'],
+                        datasets: [{
+                            label: 'Accuracy Percentage',
+                            data: [85, 15, 85],
+                            backgroundColor: [palette.deepBlue, palette.veryLightBlue, palette.brightBlue],
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: { ...universalTooltipCallback, maintainAspectRatio: false }
+                });
+            }
+
+            const radarLabels = [
+                'Data Accuracy', 'Decision Speed', 'Sync Efficiency', 
+                'Manual Effort Reduction', 'NLP Precision'
+            ].map(l => wrapLabel(l));
+            const performanceRadarChartCtx = document.getElementById('performanceRadarChart');
+            if(performanceRadarChartCtx) {
+                new Chart(performanceRadarChartCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: radarLabels,
+                        datasets: [{
+                            label: 'Performance Uplift',
+                            data: [85, 25, 40, 30, 85],
+                            fill: true,
+                            backgroundColor: 'rgba(0, 110, 230, 0.2)',
+                            borderColor: palette.brightBlue,
+                            pointBackgroundColor: palette.brightBlue,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: palette.brightBlue
+                        }]
+                    },
+                    options: { ...universalRadarCallback, maintainAspectRatio: false }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
