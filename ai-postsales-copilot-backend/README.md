@@ -1,4 +1,4 @@
-A comprehensive FastAPI backend for AI-powered post-sales contract management with NLP capabilities and CRM integrations.
+# A comprehensive FastAPI backend for AI-powered post-sales contract management with NLP capabilities and CRM integrations
 
 ## Features
 
@@ -21,34 +21,40 @@ A comprehensive FastAPI backend for AI-powered post-sales contract management wi
 ## Setup Instructions
 
 ### 1. Clone the repository
+
 ```bash
 git clone <repository-url>
 cd ai-postsales-copilot
 ```
 
 ### 2. Create virtual environment
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 ### 3. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Install spaCy model
+
 ```bash
 python -m spacy download en_core_web_sm
 ```
 
 ### 5. Configure environment variables
+
 ```bash
 cp .env.example .env
 # Edit .env with your configuration
 ```
 
 ### 6. Database setup
+
 ```bash
 # Initialize Alembic
 alembic init migrations
@@ -61,6 +67,7 @@ alembic upgrade head
 ```
 
 ### 7. Run the application
+
 ```bash
 # Development
 uvicorn app.main:app --reload --port 8000
@@ -72,12 +79,14 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 ## API Documentation
 
 Once running, access the interactive API documentation at:
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
+
+- Swagger UI: <http://localhost:8000/docs>
+- ReDoc: <http://localhost:8000/redoc>
 
 ## Key Endpoints
 
 ### Contracts
+
 - `POST /api/contracts/upload` - Upload and parse contract
 - `GET /api/contracts` - List all contracts
 - `GET /api/contracts/{id}` - Get contract details
@@ -85,11 +94,13 @@ Once running, access the interactive API documentation at:
 - `POST /api/contracts/{id}/reparse` - Re-parse contract with NLP
 
 ### Dashboard
+
 - `GET /api/dashboard/summary` - Dashboard summary metrics
 - `GET /api/dashboard/renewal-forecast` - Contract renewal forecast
 - `GET /api/dashboard/metrics` - Detailed business metrics
 
 ### CRM
+
 - `POST /api/crm/sync` - Trigger CRM synchronization
 - `GET /api/crm/records` - List CRM records
 - `GET /api/crm/sync-status` - Get sync status
@@ -97,10 +108,12 @@ Once running, access the interactive API documentation at:
 ## Environment Variables
 
 ### Required
+
 - `DATABASE_URL`: PostgreSQL connection string
 - `SECRET_KEY`: JWT secret key
 
 ### Optional (for full functionality)
+
 - `OPENAI_API_KEY`: For advanced NLP features
 - `SALESFORCE_CLIENT_ID`: Salesforce OAuth client ID
 - `SALESFORCE_CLIENT_SECRET`: Salesforce OAuth client secret
@@ -145,11 +158,13 @@ docker run -p 8000:8000 --env-file .env ai-postsales-copilot
 ## Production Deployment
 
 ### Using Gunicorn
+
 ```bash
 gunicorn app.main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
 ```
 
 ### Using Docker Compose
+
 ```yaml
 version: '3.8'
 
@@ -195,7 +210,7 @@ celery_app = Celery(
 
 # Run worker
 celery -A celery_app worker --loglevel=info
-```
+
 
 ## License
 
@@ -204,7 +219,7 @@ MIT License
 ## Support
 
 For issues and questions, please open an issue in the repository.
-```
+
 
 ## Next Steps
 
