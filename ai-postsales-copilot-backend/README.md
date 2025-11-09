@@ -3,7 +3,7 @@
 ## Features
 
 - **Contract Management**: Upload, parse, and manage contracts with AI/NLP extraction
-- **CRM Integration**: Sync with Salesforce and HubSpot
+- **CRM Integration**: Sync with HubSpot
 - **Dashboard Analytics**: Real-time metrics and insights
 - **NLP Processing**: Extract key fields from contracts (renewal dates, payment terms, obligations)
 - **Data Pipeline**: Unified customer data from multiple sources
