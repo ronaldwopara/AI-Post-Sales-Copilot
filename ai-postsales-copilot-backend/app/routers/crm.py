@@ -90,7 +90,7 @@ def process_salesforce_results(data: dict, db: Session):
         crm_record.annual_revenue = account.get("AnnualRevenue")
         crm_record.employee_count = account.get("NumberOfEmployees")
         crm_record.raw_data = account
-        crm_record.synced_at = datetime.utcnow()
+        crm_record.synced_at = datetime.timezone.utc()
     
     db.commit()
 
