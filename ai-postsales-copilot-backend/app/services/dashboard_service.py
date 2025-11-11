@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from sqlalchemy import and_, or_
+from sqlalchemy import and_, or_, func
 from datetime import datetime, timedelta
 from typing import Dict, List, Any
 from app.models import Contract, Customer, CRMRecord
@@ -27,7 +27,7 @@ class DashboardService:
         total_value = self.db.query(Contract).filter(
             Contract.status == "active"
         ).with_entities(
-            self.db.func.sum(Contract.total_value)
+            func.sum(Contract.total_value)
         ).scalar() or 0.0
         
         # Payment reminders

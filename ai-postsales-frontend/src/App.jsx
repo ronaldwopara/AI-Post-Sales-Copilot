@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [message, setMessage] = useState('Loading...')
+
+  useEffect(() => {
+    // Fetch from the proxy, not http://localhost:8000
+    axios.get('/')
+      .then(response => {
+        // Data from app/main.py's root() function
+        setMessage(JSON.stringify(response.data));
+      })
+      .catch(error => {
+        setMessage(`Error: ${error.message}`);
+      });
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="p-10 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold text-blue-700">AI Post-Sales Copilot</h1>
+      <div className="mt-4 p-4 bg-white rounded shadow">
+        <p className="font-mono">
+          <strong>Backend Connection Test:</strong> {message}
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
