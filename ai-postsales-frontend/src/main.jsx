@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import App from './App' // This will be our layout
-import DashboardPage from './pages/DashboardPage.'
+import DashboardPage from './pages/DashboardPage'
 import ContractsPage from './pages/ContractsPage'
 import './index.css'
 
