@@ -33,7 +33,7 @@ async def upload_contract(
     # Create contract record
     contract = Contract(
         customer_id=customer_id,
-        contract_number=f"CNT-{datetime.timezone.utc().strftime('%Y%m%d%H%M%S')}",
+        contract_number=f"CNT-{datetime.utcnow().strftime('%Y%m%d%H%M%S')}",
         title=file.filename,
         raw_text=text,
         file_path=file.filename,
